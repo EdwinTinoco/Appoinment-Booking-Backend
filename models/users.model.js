@@ -19,19 +19,19 @@ const usersSchema = new Schema({
       type: String,
       required: true,
       unique: true,
-      trim: true
+      trim: true,
+      minlength: 6
    },
    users_password: {
       type: String,
       required: true,
       trim: true,
       minlength: 6,
-      maxlength: 16
+      maxlength: 1024
    },
 }, {
    timestamps: true,
 });
 
-const Users = mongoose.model('Users', usersSchema);
 
-module.exports = Users;
+module.exports = mongoose.model('Users', usersSchema);
