@@ -15,6 +15,12 @@ const usersSchema = new Schema({
       trim: true,
       minlength: 3
    },
+   users_phone: {
+      type: Number,
+      required: true,
+      trim: true,
+      maxlength: 10
+   },
    users_email: {
       type: String,
       required: true,
